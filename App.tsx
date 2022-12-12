@@ -5,10 +5,9 @@ import './style.css';
 export default function App() {
   const [item, setItem] = React.useState(<h1>check</h1>);
   const [newItem, setNewItem] = React.useState(<h1>check</h1>);
-  const org = `<p>Hello Batman, decidee what to do:</p>
-<a href='#'>asdasd</a>`;
-  const changed = `<p>Hello <u>B</u>atman, <b>decidee</b> <a href="23454">what</a> to do:</p>
-<a href='#'>asdasd</a> `;
+  const org = `<ul> <li>Hello Batman, decidee what to do: <a href='#'>asdasd</a></li> <li>Hello Batman, decidee what to do: <a href='#'>asdasd</a></li></ul>
+`;
+  const changed = `<ul> <li>Hello <u>B</u>atman, <b>decidee</b> <a href="23454">what</a> to do: <a href='#'>asdasd</a> </li> <li>Hello Batman, sa what to do: <a href='#'>asdasd</a></li></ul>`;
   var el: any = document.createElement('div');
   el.innerHTML = htmldiff(org, changed);
   var elorg: any = document.createElement('div');
